@@ -1,5 +1,65 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: rgb(32, 212, 53);
+}
+
+.card-center{
+    margin-left: auto;margin-right: auto; width: 300px;
+}
+.card {
+  width: 300px;
+  height: 440px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-top: 20px;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  font-size: 80px;
+}
+.card::before {
+  top: 20px;
+  left: 20px;
+}
+.card::after {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+.suit-hearts::before,
+.suit-hearts::after {
+  content: "♥";
+  color: red;
+}
+
+.suit-diamonds::before,
+.suit-diamonds::after {
+  content: "♦";
+  color: red;
+}
+
+.suit-spades::before,
+.suit-spades::after {
+  content: "♠";
+  color: black;
+}
+
+.suit-clubs::before,
+.suit-clubs::after {
+  content: "♣";
+  color: black;
+}
+#cardCont {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 90px;
+  font-weight: 700;
 }
